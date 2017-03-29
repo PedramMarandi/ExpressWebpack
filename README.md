@@ -10,12 +10,13 @@ ExpressMvc is a full-structured simple boilerplate for Express.js based on MVC s
   
 ## Installation
 
-start to develope your application with 
+To start developing your application, after you cloned the project do 
 
 ```sh
+$ npm install
 $ npm run-script run-dev
 ```
-
+---
 # Routing
 all of your application routes will be saved into ***./app/lib/routes*** folder.
 
@@ -75,6 +76,7 @@ router.use(function(req, res, next) {
 router.get('/', new IndexController().index);
 module.exports = router;
 ```
+---
 
 ## Models
 All of your applications' models goes into ***./app/models*** folder.
@@ -91,6 +93,7 @@ mongoos.model('User', userSchema);
 ```
 
 Currently, ExpressMVC works with [Mongoose object mondeling](http://mongoosejs.com/) for MongoDB.
+---
 
 ## Configs
 All of your configs files should be in **./config** folder. 
@@ -99,7 +102,10 @@ All of your configs files should be in **./config** folder.
 configs =  Object.assign({
     project: 'ExpressMVC Boilderplate', 
     url: 'localhost', 
-    port: process.env.PORT || 3000,    
+    port: process.env.PORT || 3000,  
+    api: {
+        address: 'http://github.com/api'
+    }  
 });
 
 module.exports = configs;
@@ -109,3 +115,10 @@ Whenever you created a new config, by passing it to **registerConfigs()** functi
 import config from './config/main';
 registerConfigs(app, config); 
 ```
+Also if you create nested level config objects, each level will be separated with a **" . "** 
+```javascript 
+    app.get('api.address');
+```
+
+---
+
