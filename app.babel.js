@@ -1,4 +1,4 @@
 require('babel-register')({
-	presets: ['es2015']
+	presets: ['es2016']
 });
 require('./app');
