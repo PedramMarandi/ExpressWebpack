@@ -91,8 +91,8 @@ var userSchema = new mongoos.Schema({
 });
 mongoos.model('User', userSchema);
 ```
-
 Currently, ExpressMVC works with [Mongoose object mondeling](http://mongoosejs.com/) for MongoDB.
+
 ---
 
 ## Configs
