@@ -24,5 +24,6 @@ function register(app) {
     res.status(err.status || 500);
     res.render('error');
     });
-}
+};
+
 export default register;

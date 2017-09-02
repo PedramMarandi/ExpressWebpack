@@ -22,7 +22,7 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "run-dev": "nodemon ./bin/www --exec babel-node"
+    "run-dev": "nodemon  ./bin/www --exec babel-node"
   },
   "repository": {
     "type": "git",

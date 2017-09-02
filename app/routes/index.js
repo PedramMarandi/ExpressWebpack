@@ -4,8 +4,8 @@ var router = express.Router();
 
 /* GET home page. */
 router.use(function(req, res, next) {
-  console.log(req.query.name);
-  next();
+    console.log(req.query.name);
+    next();
 });
 
 router.get('/', new indexController().index);
