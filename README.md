@@ -58,25 +58,6 @@ export default class IndexController extends BaseController {
     }
 }
 ```
-### Router and Controllers
-Also, you can instantiate a controller within your routers.
-
-***./app/routes/index.js***
-```javascript 
-import IndexController from '../controllers/index/IndexController';
-var express = require('express');
-var router = express.Router();
-
-/* GET home page. */
-router.use(function(req, res, next) {
-  console.log("Route Middleware");
-  next();
-});
-
-router.get('/', new IndexController().index);
-module.exports = router;
-```
----
 
 ## Models
 All of your applications' models goes into ***./app/models*** folder.
