@@ -11,7 +11,8 @@ import {
 import db from './app/lib/database';
 import config from './app/config/config';
 import registerRoutes from './app/route';
-import User from './app/models/users';
+import User from './app/models/User';
+
 var app = express();
 
 // registerLocal(app, {asd: config});

@@ -4,6 +4,7 @@ import {
 import mongoose from 'mongoose';
 
 mongoose.connect(`mongodb://${mongo.username}:${mongo.password}@${mongo.adress}:${mongo.port}/${mongo.name}`);
+mongoose.Promise = global.Promise;
 
 mongoose.connection.on('connected', () => console.log('Mongo db connected'));
 mongoose.connection.on('error', (err) => console.log('An error occured in mongoose connection ' + err));

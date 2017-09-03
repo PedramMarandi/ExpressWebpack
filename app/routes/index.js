@@ -1,13 +1,11 @@
-import Index from '../controllers/index/indexController';
+import Index from '../controllers/index';
+import call from './proxyClient';
+
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
-router.use(function(req, res, next) {
-    next();
-});
 
-router.get('/', Index.getIndex);
-router.get('/userCount', Index.getUserCount);
+
+router.get('/', call(Index.getIndex, (req, res, next) => [res]));
 
 module.exports = router;
