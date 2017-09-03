@@ -1,8 +1,11 @@
-import db from '../config/main';
-import MongoClient from 'mongoose';
+import {
+    mongo
+} from '../config/config';
+import mongoose from 'mongoose';
 
-// const { mongoDB } = db;
-// export default MongoClient.connect(`mongodb://${mongoDB.username}:${mongoDB.password}@${mongoDB.adress}:${mongoDB.port}/${mongoDB.name}`, function(err, db) {
-//         if(err) console.log("Database Connection Error: " + err);
-// });
+mongoose.connect(`mongodb://${mongo.username}:${mongo.password}@${mongo.adress}:${mongo.port}/${mongo.name}`);
+
+mongoose.connection.on('connected', () => console.log('Mongo db connected'));
+mongoose.connection.on('error', (err) => console.log('An error occured in mongoose connection ' + err));
+mongoose.connection.on('disconnected', () => console.log('Mongo db disconnected successfuly'));
 

@@ -7,10 +7,9 @@ import bodyParser from 'body-parser';
 import {
     registerConfigs,
     registerLocal
-} from './registers'
+} from './registers';
 import db from './app/lib/database';
-import Users from './app/models/users';
-import config from './app/config/main';
+import config from './app/config/config';
 import registerRoutes from './app/route';
 var app = express();
 

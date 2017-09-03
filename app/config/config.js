@@ -1,3 +1,5 @@
+import database from './db';
+
 const project = {
     project: 'CRIBBBLE BACKEND',
     url: 'localhost',
@@ -8,10 +10,11 @@ const project = {
 
 const environemnts = {
     production: {
-        isProduction: false,
+
     },
     development: {
         port: parseInt(process.env.PORT),
+        mongo: database
     }
 }[process.env.NODE_ENV || 'development'];
 
