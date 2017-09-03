@@ -1,12 +1,13 @@
-import indexController from '../controllers/index/indexController';
+import Index from '../controllers/index/indexController';
 var express = require('express');
 var router = express.Router();
 
 /* GET home page. */
 router.use(function(req, res, next) {
-    console.log(req.query.name);
     next();
 });
 
-router.get('/', new indexController().index);
+router.get('/', Index.getIndex);
+router.get('/userCount', Index.getUserCount);
+
 module.exports = router;

@@ -4,7 +4,7 @@ const config = {
         username: '',
         password: '',
         port: 27017,
-        name: 'default'
+        name: 'marandi'
     },
     'production': {
 

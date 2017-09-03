@@ -1,10 +1,13 @@
 import baseController from '../BaseController';
-import UserModel from '../../models/users';
+import User from '../../models/users';
 
-export default class indexController extends baseController {
-    index(req, res, next) {
-        res.render('index', {
-            title: 'ExpressMVC'
-        });
-    }
+exports.getIndex = (req, res, next) => {
+    res.render('index', {
+        title: 'ExpressMVC'
+    });
+}
+
+exports.getUserCount = async(req, res, next) => {
+    const userCount = await User.count({});
+    res.send(`Total number of users are ${userCount}`);
 }

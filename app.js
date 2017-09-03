@@ -11,6 +11,7 @@ import {
 import db from './app/lib/database';
 import config from './app/config/config';
 import registerRoutes from './app/route';
+import User from './app/models/users';
 var app = express();
 
 // registerLocal(app, {asd: config});
@@ -30,9 +31,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //register the config file into the app.local
 registerConfigs(app, config); // Register configs
-console.log(app.locals);
 registerRoutes(app); // Register routes in application
-
-
 
 module.exports = app;
