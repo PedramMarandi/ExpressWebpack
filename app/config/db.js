@@ -7,8 +7,12 @@ const config = {
         name: 'marandi'
     },
     'production': {
-
-    }, 
+        adress: 'localhost',
+        username: '',
+        password: '',
+        port: 27017,
+        name: 'marandi'
+    },
     'test': {
 
     }

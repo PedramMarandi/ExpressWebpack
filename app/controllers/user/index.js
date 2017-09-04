@@ -1,5 +1,5 @@
-import {getUser as getUserByUsername} from '../services/user';
-import {createUser} from '../services/user';
+import {getUser as getUserByUsername} from '../../services/user';
+import {createUser} from '../../services/user';
 
 /**
  * Get a user by username.

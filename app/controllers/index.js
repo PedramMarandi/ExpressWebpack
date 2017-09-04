@@ -5,8 +5,10 @@ import User from '../models/User';
  * @param Express res
  * @returns Promise 
  */
-exports.getIndex = async function(res) {
-    return Promise.resolve().then(res.render('index', {
-        title: 'ExpressMVC'
-    }));
+exports.getIndex = async function(res, next) {
+    return Promise.resolve().then(() => {
+        return {
+            message: 'Your backend server is working perfectly'
+        }
+    });
 }

@@ -3,7 +3,10 @@ import {
 } from '../config/config';
 import mongoose from 'mongoose';
 
-mongoose.connect(`mongodb://${mongo.username}:${mongo.password}@${mongo.adress}:${mongo.port}/${mongo.name}`);
+const options = {
+    useMongoClient: true,
+}
+mongoose.createConnection(`mongodb://${mongo.username}:${mongo.password}@${mongo.adress}:${mongo.port}/${mongo.name}`);
 mongoose.Promise = global.Promise;
 
 mongoose.connection.on('connected', () => console.log('Mongo db connected'));

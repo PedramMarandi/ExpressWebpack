@@ -6,7 +6,6 @@ export function getUser(username) {
 
 export function createUser(params) {
     const {username, firstname, lastname, password} = params;
-    console.log(`${username}, ${firstname}, ${lastname} ${password}`);
 
     return User.create({
         username,

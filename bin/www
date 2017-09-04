@@ -3,14 +3,19 @@
 /**
  * Module dependencies.
  */
-
-var app = require('../app');
 var debug = require('debug')('express:server');
 var http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
+const env = process.env.NODE_ENV;
+if(env == 'production') {
+  var app = require('../build/backend');
+} else {
+  var app = require('../app');
+  
+}
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);

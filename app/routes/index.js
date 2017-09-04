@@ -1,11 +1,8 @@
 import Index from '../controllers/index';
 import call from './proxyClient';
+import express, {Router} from 'express';
 
-var express = require('express');
-var router = express.Router();
-
-
-
-router.get('/', call(Index.getIndex, (req, res, next) => [res]));
+const router = Router();
+router.get('/', call(Index.getIndex, (req, res, next) => [res, next]));
 
 module.exports = router;
