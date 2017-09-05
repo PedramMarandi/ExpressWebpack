@@ -1,7 +1,7 @@
 {
     "name": "expressmvc",
     "version": "1.0.0",
-    "description": "Simple ES6 Boilderplate for Express.js",
+    "description": "Webpack and Express backend boilerplate Edit",
     "main": "app.babel.js",
     "dependencies": {
         "babel-runtime": "^6.23.0",
