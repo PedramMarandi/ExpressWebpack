@@ -1,6 +1,6 @@
 /**
  * With this fake route client, Express parameters will be binded to our controller function
- * @param {any} a promiss which is returned by controller 
+ * @param {promise} a promiss which is returned by controller 
  * @param {any} params are the req, res, next which are provided by express middleware
  */
 const controllerHandler = (promise, params) => async(req, res, next) => {
