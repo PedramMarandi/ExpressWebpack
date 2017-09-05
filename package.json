@@ -26,7 +26,7 @@
     "scripts": {
         "test": "mocha --compilers js:babel-register",
         "start": "NODE_ENV=production node ./build/backend.js",
-        "run-dev": "nodemon  ./app.js --exec babel-node",
+        "run-dev": "DEBUG=express:* nodemon  ./app.js --exec babel-node",
         "build": "rm -r build && NODE_ENV=production webpack --config ./webpack.config.js --progress --profile --colors"
     },
     "repository": {

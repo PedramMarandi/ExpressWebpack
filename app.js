@@ -14,9 +14,7 @@ import config from './app/config/config';
 import registerRoutes from './app/route';
 var debug = require('debug')('express:server');
 
-
 var app = express();
-
 // view engine setup
 app.set('views', './app/views');
 app.set('view engine', 'pug');

@@ -1,3 +1,4 @@
 .DS_Store
 .jsbeautifyrc
 node_modules/
+build/

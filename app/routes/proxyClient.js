@@ -2,8 +2,7 @@ const controllerHandler = (promise, params) => async(req, res, next) => {
     const boundParams = params ? params(req, res, next) : [];
 
     try {
-        const result = await promise(...boundParams);
-                
+        const result = await promise(...boundParams);        
         return res.json(result || {
             message: 'OK'
         });
