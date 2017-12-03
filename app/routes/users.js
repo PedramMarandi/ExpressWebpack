@@ -1,12 +1,13 @@
-import express from 'express';
-import mongoose from 'mongoose';
-import call from './proxyClient';
-import userController from '../controllers/user'
+import { Router } from 'express';
 
-var router = require('express').Router();
+const router = Router();
 /* GET users listing. */
-router.get('/:username', call(userController.getUser, (req, res, next) => [req.params.username]));
+router.get('users/:username', (req, res) => {
+  const { username } = req.params;
+  return res.json({
+    username,
+    status: 'User is activated',
+  });
+});
 
-router.post('/', call(userController.create, (req, res, next) => [req.body]));
-
-module.exports = router;
+module.exports = Router;
